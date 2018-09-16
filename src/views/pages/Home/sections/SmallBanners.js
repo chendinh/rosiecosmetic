@@ -48,7 +48,6 @@ const styles = theme => ({
       flexBasis: "100%",
       marginRight: "0px",
       marginBottom: "8px",
-
     }
   },
   box2: {

@@ -78,7 +78,6 @@ const styles = theme => ({
     position: "relative",
     [theme.breakpoints.down("sm")]: {
       flexBasis: "100%",
-      marginRight: "0px",
       marginBottom: "8px",
       marginLeft: "auto",
       marginRight: "auto",

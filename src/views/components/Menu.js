@@ -5,6 +5,8 @@ import React from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
 import Grid       from "@material-ui/core/Grid";
 import Button     from "@material-ui/core/Button";
+import MenuIcon from '@material-ui/icons/Menu';
+import IconButton from '@material-ui/core/IconButton';
 
 class Menu extends React.Component {
   handleClick = () => {
@@ -16,8 +18,9 @@ class Menu extends React.Component {
     return (
       <div className={classes.section}>
       <Grid container justify="center">
-      <Grid item md/>
-        <Grid item 
+      <Grid item xs={5} md/>
+        <Grid item xs={2}
+              sm={2} 
               md={12}
               lg={12}
               xl={12}>
@@ -33,6 +36,11 @@ class Menu extends React.Component {
         </Grid>
         <Grid item xs />
       </Grid>
+      <div className={classes.menuMobile}>
+        <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+          <MenuIcon />
+        </IconButton>
+      </div>
     </div>
     )
   }
@@ -48,6 +56,46 @@ const styles = theme => ({
       display: "none",
     }
   },
+  box3: {
+    direction: "column",
+    marginRight: "5px",
+    flexBasis: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    overflow: "hidden",
+    position: "relative",
+  },
+
+  menuMobile: {
+    marginTop: "30px",
+    fontFamily: "sans-serif",
+    backgroundAttachment: "fixed",
+    magrinLeft: "auto",
+    marginRight: "auto",
+    [theme.breakpoints.up("md")]: {
+      display: "none",
+    }
+  },
+  iconMenu1: {
+    width: "30px",
+    height: "4px",
+    backgroundColor: "grey",
+    marginTop: "50px",
+    marginBottom: "2px",
+  },
+  iconMenu2: {
+    width: "30px",
+    height: "4px",
+    backgroundColor: "grey",
+    margin: "2px 0",
+  },
+  iconMenu3: {
+    width: "30px",
+    height: "4px",
+    backgroundColor: "grey",
+    margin: "2px 0",
+  },
   button: {
     fontSize: "18px",
     fontWeight: "normal",
@@ -60,3 +108,14 @@ const styles = theme => ({
 });
 
 export default withStyles(styles)(Menu);
+
+  {/* <div className={classes.box3}>  
+          <div className={classes.iconMenu1}></div>
+        </div>
+        <div className={classes.box3}>  
+          <div className={classes.iconMenu2}></div>
+        </div> 
+        <div className={classes.box3}>  
+          <div className={classes.iconMenu3}></div>
+        </div>
+      </div> */}
