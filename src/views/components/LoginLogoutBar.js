@@ -16,7 +16,7 @@ class LoginLogoutBar extends React.Component {
               md={9}
               lg={8}
               xl={8}/>
-        <Grid item xs={6}
+        <Grid item xs={8}
               sm={4}
               md={3}
               lg={4}
