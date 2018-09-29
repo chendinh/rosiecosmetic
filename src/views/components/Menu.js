@@ -1,18 +1,14 @@
-import React from "react";
+import React      from "react";
 
 // @material-ui/core components
 //import classNames from "classnames";
 import withStyles from "@material-ui/core/styles/withStyles";
 import Grid       from "@material-ui/core/Grid";
 import Button     from "@material-ui/core/Button";
-import MenuIcon from '@material-ui/icons/Menu';
+import MenuIcon   from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
 
 class Menu extends React.Component {
-  handleClick = () => {
-    console.log("menu props:",this.props);
-    this.props.history.replace("/a");
-  }
   render() {
     const { classes } = this.props;
     return (
@@ -25,13 +21,13 @@ class Menu extends React.Component {
               lg={12}
               xl={12}>
             <div className={classes.menuDesktop}>
-              <Button onClick={this.handleClick}  className={classes.button}>BROWS</Button>
-              <Button onClick={this.handleClick}   className={classes.button}>EYES</Button>
-              <Button onClick={this.handleClick}  className={classes.button}>FACE</Button>
-              <Button onClick={this.handleClick} className={classes.button}>SKIN CARE</Button>
-              <Button onClick={this.handleClick} className={classes.button}>LIPS</Button>
-              <Button color="secondary" onClick={this.handleClick} className={classes.button}>SALE</Button>
-              <Button onClick={this.handleClick} className={classes.button}>BLOG</Button>
+              <Button href="/brows"     className={classes.button}>BROWS</Button>
+              <Button href="/eyes"      className={classes.button}>EYES</Button>
+              <Button href="/face"      className={classes.button}>FACE</Button>
+              <Button href="/skincare"  className={classes.button}>SKIN CARE</Button>
+              <Button href="/lips"      className={classes.button}>LIPS</Button>
+              <Button href="/sale"      className={classes.button} color="secondary" >SALE</Button>
+              <Button href="/blog"      className={classes.button}>BLOG</Button>
             </div>
         </Grid>
         <Grid item xs />
@@ -109,7 +105,7 @@ const styles = theme => ({
 
 export default withStyles(styles)(Menu);
 
-  {/* <div className={classes.box3}>  
+  /* <div className={classes.box3}>  
           <div className={classes.iconMenu1}></div>
         </div>
         <div className={classes.box3}>  
@@ -118,4 +114,4 @@ export default withStyles(styles)(Menu);
         <div className={classes.box3}>  
           <div className={classes.iconMenu3}></div>
         </div>
-      </div> */}
+      </div> */

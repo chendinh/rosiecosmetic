@@ -1,13 +1,13 @@
-import React from "react";
+import React          from "react";
 // @material-ui/core components
 //import classNames from "classnames";
-import withStyles from "@material-ui/core/styles/withStyles";
-import Grid       from "@material-ui/core/Grid";
-
+import withStyles     from "@material-ui/core/styles/withStyles";
+import Grid           from "@material-ui/core/Grid";
 //** import File */
 import LoginLogoutBar from "./LoginLogoutBar";
 import Logo           from "./Logo";
 import Menu           from "./Menu";
+
 class FooterSection extends React.Component {
   render() {
     const { classes } = this.props;

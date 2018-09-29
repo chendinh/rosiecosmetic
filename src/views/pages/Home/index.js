@@ -11,7 +11,7 @@ import HeaderSection        from '../../components/HeaderSection';
 class index extends Component {
   render() {
     return (
-      <div style={{backgroundColor: "#F1E4E0"}}>
+      <div style={{backgroundColor: "rgb(253, 243, 249)"}}>
         <Grid container justify="center">
           <Grid item xs/>
           <Grid item xs={10} sm={10} md={10} lg={10} xl={10}>
